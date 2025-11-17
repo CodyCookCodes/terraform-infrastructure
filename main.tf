@@ -238,8 +238,3 @@ resource "aws_db_instance" "postgres" {
     Name = "${var.project_name}-db-${var.environment}"
   })
 }
-
-
-resource "aws_instance" "broken" {
-  # Missing required fields
-}
