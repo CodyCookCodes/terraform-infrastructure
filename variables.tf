@@ -20,6 +20,7 @@ variable "db_password" {
   description = "Database password"
   type        = string
   sensitive   = true
+  default     = "temp-password-for-cicd-123"
 }
 
 variable "key_name" {
@@ -30,26 +31,26 @@ variable "key_name" {
 
 variable "instance_type_map" {
   description = "Instance types by environment"
-  type		  = map(string)
+  type        = map(string)
   default = {
-	dev		  = "t3.micro"
-	staging	  = "t3.micro"
-	prod	  = "t3.micro"
+    dev     = "t3.micro"
+    staging = "t3.micro"
+    prod    = "t3.micro"
   }
 }
 
 variable "db_instance_class_map" {
   description = "DB instance classes by environment"
-  type		  = map(string)
+  type        = map(string)
   default = {
-	dev		  = "db.t3.micro"
-	staging	  = "db.t3.micro"
-	prod	  = "db.t3.micro"
+    dev     = "db.t3.micro"
+    staging = "db.t3.micro"
+    prod    = "db.t3.micro"
   }
 }
 
 variable "enable_monitoring" {
   description = "Enable enhanced monitoring"
-  type		  = bool
-  default	  = false
+  type        = bool
+  default     = false
 }
