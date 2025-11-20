@@ -6,13 +6,13 @@ terraform {
     }
   }
   
-  backend "s3" {
-	bucket	  		= "terraform-state-cody-cook-12345"
-	key       		= "task-api/terraform.tfstate"
-	region	  		= "us-west-2"
-	dynamodb_table	= "terraform-state-locks"
-	encrypt			= true
-  }
+# backend "s3" {
+#	bucket	  		= "terraform-state-cody-cook-12345"
+#	key       		= "task-api/terraform.tfstate"
+#	region	  		= "us-west-2"
+#	dynamodb_table	= "terraform-state-locks"
+#	encrypt			= true
+# }
   
 }
 
