@@ -71,13 +71,3 @@ jobs:
               repo: context.repo.repo,
               body: output
             });
-```
-
----
-
-## Step 2: Update .gitignore to exclude the old workflow
-
-Open `.gitignore` and add this line at the bottom:
-```
-# Old workflow file
-.github/workflows/terraform-validate.yml
